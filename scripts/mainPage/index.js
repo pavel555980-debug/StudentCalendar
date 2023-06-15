@@ -11,9 +11,14 @@ let _month = { "0": "Январь", "1": "Февраль", "2": "Март", "3":
 
 setInterval(() => {
     let _currDate = new Date();
-    _currDateObj.innerHTML = `${_dayOfWeek[_currDate.getDay()]}, ${_currDate.getDate()}<br>${_month[_currDate.getMonth()]} ${_currDate.getFullYear()}
-    <br>${_currDate.getHours()}:${_currDate.getMinutes()}:${_currDate.getSeconds()}`;
+    _currDateObj.innerHTML = 
+    `${_dayOfWeek[_currDate.getDay()]}, ${(parseInt(_currDate.getDate() / 10) == 0) ? `0${_currDate.getDate()}` : _currDate.getDate()}
+    <br>${_month[_currDate.getMonth()]} ${_currDate.getFullYear()}<br>
+    ${(parseInt(_currDate.getHours() / 10) == 0) ? `0${_currDate.getHours()}` : _currDate.getHours()}:${(parseInt(_currDate.getMinutes() / 10) == 0) ? `0${_currDate.getMinutes()}` : _currDate.getMinutes()}:${(parseInt(_currDate.getSeconds() / 10) == 0) ? `0${_currDate.getSeconds()}` : _currDate.getSeconds()}`;
 }, 0.1);
+
+//login button
+document.querySelector(".loginBtn").addEventListener("click", ()=>{window.location.replace("/login.html")})
 
 /*_days.forEach(element => {
 
