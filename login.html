@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - ЯКалендарь</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="loginWindow">
+        <div class="loginContainer">
+            <div>
+                Логин:
+                <br>
+                <input type="text" class="loginInput">
+            </div>
+            <div style="margin: 10px 0;">
+                Пароль:
+                <br>
+                <input type="password" class="passwordInput">
+            </div>
+            <div class="repeatPasswordForm">
+                Повторите пароль:
+                <br>
+                <input type="password" class="repeatPassword">
+            </div>
+            <div class="loginBtns">
+                <div class="login">Вход</div>
+                <div class="register" data-active="0">Регистрация</div>
+            </div>
+            <div class="errors"></div>
+        </div>
+    </div>
+</body>
+<script type="module" src="scripts/loginPage/index.js"></script>
+
+</html>

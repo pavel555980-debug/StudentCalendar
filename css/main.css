@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 body {
     width: 100vw;
     height: 100vh;
@@ -31,8 +33,34 @@ body {
     align-items: center;
 }
 
-.currDateContainer{
+.currDateContainer {
     padding: 15px;
     font-size: 24px;
     font-weight: bolder;
+}
+
+.menu {
+    display: flex;
+    height: 70px;
+    background: rgb(0, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+}
+
+.loginBtn {
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    font-size: 22px;
+    color: white;
+    padding: 5px;
+    background-color: orangered;
+    border-radius: 15px;
+    margin-right: 10px;
 }

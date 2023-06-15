@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(255, 68, 0, 1) 0%, rgba(0, 0, 0, 1) 45%);
+}
+
+.loginWindow {
+    background-color: rgba(177, 177, 177, 0.603);
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.loginContainer {
+    font-size: 26px;
+    padding: 20px;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1em;
+}
+
+input {
+    border: solid rgb(150, 150, 150) 2px;
+    border-radius: 5px;
+    outline: rgb(52, 52, 52);
+    width: 235px;
+    height: 20px;
+    font-size: 22px;
+    padding: 5px;
+}
+
+.loginBtns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 7px;
+    user-select: none;
+}
+
+.loginBtns div {
+    display: inline;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.login {
+    background-color: black;
+}
+
+.register {
+    background-color: orangered;
+}
+
+.repeatPasswordForm {
+    display: none;
+    margin-bottom: 15px;
+}
+
+.errors {
+    display: none;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    color: red;
+}
