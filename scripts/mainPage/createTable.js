@@ -1,3 +1,5 @@
+let _dayOfWeek = { "0": "Воскресенье", "1": "Понедельник", "2": "Вторник", "3": "Среда", "4": "Четверг", "5": "Пятница", "6": "Суббота" };
+
 export function createTable(table) {
     for (let i = 0; i < 5; i++) {
         let row = document.createElement("div");
@@ -13,4 +15,27 @@ export function createTable(table) {
         }
         table.appendChild(row);
     }
+}
+
+export function fillTable(table, date) {
+    let counter = 0
+    table.querySelectorAll(".day").forEach(cell => {
+        let cellContainer = cell.querySelector(".cellContainer");
+        counter+=1;
+        let cellDate = new Date();
+        cellDate.setDate(date.getDate() + counter);
+        if (cellDate.getMonth() != date.getMonth()){
+            cell.classList.add("nextMonthCell");
+        }
+        if (cellDate.getDay() == 0 || cellDate.getDay() == 6){
+            cell.classList.add("weekend");
+        }
+        if (cellDate.getTime() == new Date().getTime()){
+            cell.classList.add("currDay");
+        }
+        //console.log(counter);
+        cellContainer.innerHTML = `
+            ${cellDate.getDate()}
+        `;
+        });
 }
