@@ -49,9 +49,18 @@ setInterval(() => {
 }, 0.1);
 
 //login button
-document.querySelector(".loginBtn").addEventListener("click", ()=>{window.location.replace("/login.html")})
+document.querySelector(".loginBtn").addEventListener("click", ()=>window.location.replace("/login.html"))
+document.querySelector(".settingBtn").addEventListener("click", ()=>window.location.replace("/settings.html"))
 
-//arrows
+/*arrows
+document.querySelector(".arrowUp").addEventListener("click", ()=>{
+
+});
+*/
+
+if (localStorage.getItem("data") != null){
+    document.querySelector(".profile").textContent = JSON.parse(localStorage.getItem("data"))["username"];
+}
 
 /*_days.forEach(element => {
 
