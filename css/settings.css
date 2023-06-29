@@ -9,6 +9,7 @@ body{
 
 .page{
     display: flex;
+    flex-direction: row;
     width: 100vw;
     height: 100vh;
 }
@@ -31,10 +32,6 @@ body{
     flex-grow: 6;
 }
 
-.setting_frame div{
-    display: inline-block;
-}
-
 .user{
     border-bottom: 2px solid black;
     font-size: 30px;
@@ -55,16 +52,35 @@ body{
     color: rgba(128, 128, 128, 0.562);
 }
 
-.dayOfWeek{
+.day{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+}
+
+.dayInfo{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.dayOfWeek{
     font-size: 20px;
     padding: 5px;
-    margin: 10px 20px;
     color: white;
 }
 
 .addToScheduleBtn{
+    margin-left: 10px;
     font-size: 25px;
+    color: red;
+    user-select: none;
+}
+
+.subject{
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+    font-style: italic;
 }

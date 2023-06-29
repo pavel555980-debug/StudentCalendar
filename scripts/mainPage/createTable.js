@@ -8,6 +8,7 @@ export function createTable(table) {
             let cell = document.createElement("div");
             cell.className = `cell day${i == 0 ? " firstRow" : ""}${j == 0 ? " firstCell" : ""}`;
             cell.dataset.serialNumber = i*7 + j + 1;
+            cell.dataset.dayOfWeek = j + 1;
             row.appendChild(cell);
             let cellContainer = document.createElement("div");
             cellContainer.className = "cellContainer";
@@ -38,4 +39,22 @@ export function fillTable(table, date) {
             ${cellDate.getDate()}
         `;
         });
+}
+
+export function addSubjects(table, subjects){
+    let dayOfWeek = {'1': '1', '2': '2', '3': '3', '4': '4', '5': '5', '6': '6', '7': '0'};
+    document.querySelectorAll(".subject").forEach((sub)=>{
+        sub.remove()
+    })
+    table.querySelectorAll(".day").forEach(cell => {
+        if (subjects[dayOfWeek[cell.dataset.dayOfWeek]] != undefined){
+            subjects[dayOfWeek[cell.dataset.dayOfWeek]].split(":").forEach(subject=>{
+                let subDiv = document.createElement("div");
+                subDiv.classList.add("subject");
+                subDiv.textContent = subject;
+                cell.appendChild(subDiv);
+            });
+        }
+    });
+    console.log(1);
 }
